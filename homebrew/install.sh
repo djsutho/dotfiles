@@ -21,4 +21,31 @@ then
 
 fi
 
+# quick exit when no updates TODO find a wat to detect this.
+exit 0
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+brew tap \
+  domt4/chromium \
+  buo/cask-upgrade
+
+brew install \
+  coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
+  pyenv \
+  domt4/chromium/chromium \
+  tree
+
+brew cask install \
+  meld \
+  mac-chromium \
+  iterm2
+
+# Remove outdated versions from the cellar.
+brew cleanup
+
 exit 0
