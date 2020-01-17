@@ -52,8 +52,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 [[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
 [[ -n "${key[Down]}"    ]] && bindkey  "${key[Down]}"    history-beginning-search-forward
 
-setopt inc_append_history no_share_history
-
 source "$HOME/.oh-my-zshrc"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

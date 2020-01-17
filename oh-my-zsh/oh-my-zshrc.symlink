@@ -71,13 +71,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    # mvn
-    # pip
-    # python
-    # ssh-agent
+    mvn
+    pip
+    python
+    ssh-agent
     # history-substring-search
     # command-not-found
-    # zsh-autosuggestions
+    zsh-autosuggestions
 )
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on

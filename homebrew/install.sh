@@ -22,7 +22,7 @@ then
 fi
 
 # quick exit when no updates TODO find a wat to detect this.
-exit 0
+# exit 0
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -38,12 +38,20 @@ brew install \
   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
   pyenv \
   domt4/chromium/chromium \
-  tree
+  tree \
+  vault \
+  jq \
+  git
 
 brew cask install \
   meld \
   mac-chromium \
-  iterm2
+  iterm2 \
+  rectangle \
+  perforce \
+  p4v \
+  opera \
+  sublime-text
 
 # Remove outdated versions from the cellar.
 brew cleanup
