@@ -43,7 +43,9 @@ brew install \
   vault \
   jq \
   git \
-  sshuttle
+  sshuttle \
+  awscli \
+  dive
 
 brew cask install \
   mac-chromium \

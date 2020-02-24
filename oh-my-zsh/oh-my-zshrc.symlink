@@ -78,6 +78,7 @@ plugins=(
     # history-substring-search
     # command-not-found
     zsh-autosuggestions
+    gitfast
 )
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
