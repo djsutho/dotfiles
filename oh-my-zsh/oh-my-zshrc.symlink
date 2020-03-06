@@ -79,6 +79,7 @@ plugins=(
     # command-not-found
     zsh-autosuggestions
     gitfast
+    colorize
 )
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on

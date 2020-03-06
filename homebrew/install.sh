@@ -45,7 +45,8 @@ brew install \
   git \
   sshuttle \
   awscli \
-  dive
+  dive \
+  pygments
 
 brew cask install \
   mac-chromium \
@@ -56,7 +57,9 @@ brew cask install \
   opera \
   sublime-text \
   docker \
-  insomnia
+  insomnia \
+  postman \
+  virtualbox
 
 brew cu -y
 
