@@ -59,7 +59,8 @@ brew cask install \
   docker \
   insomnia \
   postman \
-  virtualbox
+  virtualbox \
+  vlc
 
 brew cu -y
 
