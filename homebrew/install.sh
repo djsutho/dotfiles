@@ -47,6 +47,7 @@ brew install \
   awscli \
   dive \
   pygments
+# pipenv \ need pre release
 
 brew cask install \
   mac-chromium \
@@ -60,7 +61,8 @@ brew cask install \
   insomnia \
   postman \
   virtualbox \
-  vlc
+  vlc \
+  disk-inventory-x
 
 brew cu -y
 
