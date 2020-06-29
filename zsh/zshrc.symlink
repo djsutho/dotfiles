@@ -1,3 +1,19 @@
+# using `gdate` on osx
+date_fn="date"
+if (( $+commands[gdate] ))
+then
+  date_fn="gdate"
+fi
+
+local start_time=$(($($date_fn +%s%0N)/1000000))
+
+print_elapsed() {
+    now=$(($($date_fn +%s%0N)/1000000))
+    elapsed=$(($now-$start_time))
+    # echo "$1 ${elapsed}ms"
+}
+
+
 # shortcut to this dotfiles path is $DF_PATH
 export DF_PATH=$HOME/.dotfiles
 
@@ -52,11 +68,25 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 [[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
 [[ -n "${key[Down]}"    ]] && bindkey  "${key[Down]}"    history-beginning-search-forward
 
+print_elapsed "pre oh-my-zshrc"
 source "$HOME/.oh-my-zshrc"
 
-eval "$(pipenv --completion)"
-eval "$(pyenv init -)"
+print_elapsed "pre pipenv"
+# inline output of `pipenv --completion` instead of using `eval "$(pipenv --completion)"`
+#compdef pipenv
+_pipenv() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _PIPENV_COMPLETE=complete-zsh  pipenv)
+}
+if [[ "$(basename -- ${(%):-%x})" != "_pipenv" ]]; then
+  compdef _pipenv pipenv
+fi
 
+print_elapsed "pre pyenv"
+eval "$(pyenv init - zsh --no-rehash)"
+
+print_elapsed "pre sdkman"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/dasutherland/.sdkman"
 [[ -s "/Users/dasutherland/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dasutherland/.sdkman/bin/sdkman-init.sh"
+
+print_elapsed "end"

@@ -6,8 +6,16 @@ fi
 export SDKMAN_DIR="/Users/dasutherland/.sdkman"
 [[ -s "/Users/dasutherland/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dasutherland/.sdkman/bin/sdkman-init.sh"
 
-sdk install java
-sdk install java 8.0.232.hs-adpt
-sdk install maven
+
+if test ! $(which java)
+then
+  sdk install java
+  sdk install java 8.0.232.hs-adpt
+fi
+
+if test ! $(which java)
+then
+  sdk install maven
+fi
 
 exit 0

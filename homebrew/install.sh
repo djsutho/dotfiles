@@ -32,13 +32,12 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-brew tap domt4/chromium
 brew tap buo/cask-upgrade
 
 brew install \
   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
   pyenv \
-  domt4/chromium/chromium \
+  pipenv \
   tree \
   vault \
   jq \
@@ -46,11 +45,14 @@ brew install \
   sshuttle \
   awscli \
   dive \
-  pygments
-# pipenv \ need pre release
+  pygments \
+  kafka \
+  telnet \
+  aws-iam-authenticator \
+  avro-tools
 
 brew cask install \
-  mac-chromium \
+  chromium \
   iterm2 \
   rectangle \
   perforce \
@@ -62,7 +64,9 @@ brew cask install \
   postman \
   virtualbox \
   vlc \
-  disk-inventory-x
+  disk-inventory-x \
+  brave-browser \
+  meld
 
 brew cu -y
 

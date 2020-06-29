@@ -1,10 +1,3 @@
-# using `gdate` on osx
-date_fn="date"
-if (( $+commands[gdate] ))
-then
-  date_fn="gdate"
-fi
-
 _command_time_preexec() {
     timer=$(($($date_fn +%s%0N)/1000000))
 }
