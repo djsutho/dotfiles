@@ -49,7 +49,9 @@ brew install \
   kafka \
   telnet \
   aws-iam-authenticator \
-  avro-tools
+  avro-tools \
+  watch \
+  pipx
 
 brew cask install \
   chromium \
@@ -72,5 +74,8 @@ brew cu -y
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# might need rehashing
+eval "$(pyenv init -)"
 
 exit 0
