@@ -42,7 +42,6 @@ brew install \
   vault \
   jq \
   git \
-  sshuttle \
   awscli \
   dive \
   pygments \
@@ -51,7 +50,8 @@ brew install \
   aws-iam-authenticator \
   avro-tools \
   watch \
-  pipx
+  pipx \
+  scc
 
 brew cask install \
   chromium \
