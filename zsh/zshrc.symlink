@@ -30,7 +30,7 @@ fi
 
 # all of our zsh files
 typeset -U config_files
-config_files=($DF_PATH/**/*.zsh)
+config_files=($DF_PATH/***/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
