@@ -17,7 +17,8 @@ _zsh_command_time() {
   if [ -n "$elapsed" ]; then
     local hours="$(($elapsed/3600000))"
     local mins="$(($elapsed%3600000/60000))"
-    local secs="$(($elapsed%60000/1000)).$(($elapsed%1000))"
+    printf -v millis '%03d' "$(($elapsed%1000))"
+    local secs="$(($elapsed%60000/1000)).$millis"
 
     local time_display=""
     if [ $hours -gt 0 ]; then
