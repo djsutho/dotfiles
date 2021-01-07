@@ -33,6 +33,7 @@ brew update
 brew upgrade
 
 brew tap buo/cask-upgrade
+brew tap ktr0731/evans
 
 brew install \
   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
@@ -51,9 +52,11 @@ brew install \
   avro-tools \
   watch \
   pipx \
-  scc
+  scc \
+  evans \
+  rbenv/tap/openssl@1.0
 
-brew cask install \
+brew install --cask \
   chromium \
   iterm2 \
   rectangle \
@@ -68,12 +71,18 @@ brew cask install \
   vlc \
   disk-inventory-x \
   brave-browser \
-  meld
+  meld \
+  bloomrpc \
+  lens \
+  mysqlworkbench
 
 brew cu -y
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# MariaDB4j bug https://github.com/vorburger/MariaDB4j/issues/48#issuecomment-694015997
+ln -sfn /usr/local/Cellar/openssl@1.0/1.0.2t /usr/local/opt/openssl
 
 # might need rehashing
 eval "$(pyenv init -)"
