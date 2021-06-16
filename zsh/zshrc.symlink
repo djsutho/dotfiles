@@ -71,6 +71,12 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 print_elapsed "pre oh-my-zshrc"
 source "$HOME/.oh-my-zshrc"
 
+# TMOUT=1
+
+TRAPALRM() {
+    zle reset-prompt
+}
+
 print_elapsed "pre pipenv"
 # inline output of `pipenv --completion` instead of using `eval "$(pipenv --completion)"`
 #compdef pipenv
@@ -93,3 +99,20 @@ export SDKMAN_DIR="/Users/dasutherland/.sdkman"
 [[ -s "/Users/dasutherland/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dasutherland/.sdkman/bin/sdkman-init.sh"
 
 print_elapsed "end"
+
+# >>> conda initialize >>>
+CONDA_AUTO_ACTIVATE_BASE=false
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

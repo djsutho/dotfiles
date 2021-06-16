@@ -39,6 +39,7 @@ brew install \
   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
   pyenv \
   pipenv \
+  pipx \
   tree \
   vault \
   jq \
@@ -51,18 +52,23 @@ brew install \
   aws-iam-authenticator \
   avro-tools \
   watch \
-  pipx \
   scc \
   evans \
+  detekt \
+  helm \
+  protobuf \
+  prototool \
   rbenv/tap/openssl@1.0
 
 brew install --cask \
   chromium \
+  opera \
+  brave-browser \
+  microsoft-edge \
   iterm2 \
   rectangle \
   perforce \
   p4v \
-  opera \
   sublime-text \
   docker \
   insomnia \
@@ -70,11 +76,16 @@ brew install --cask \
   virtualbox \
   vlc \
   disk-inventory-x \
-  brave-browser \
+  grandperspective \
+  omnidisksweeper \
   meld \
   bloomrpc \
+  wombat \
+  milkman \
   lens \
-  mysqlworkbench
+  mysqlworkbench \
+  swiftdefaultappsprefpane \
+  miniconda
 
 brew cu -y
 
