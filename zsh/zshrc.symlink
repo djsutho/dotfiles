@@ -71,11 +71,13 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 print_elapsed "pre oh-my-zshrc"
 source "$HOME/.oh-my-zshrc"
 
+# uncomment to increment clock
 # TMOUT=1
-
-TRAPALRM() {
-    zle reset-prompt
-}
+# TRAPALRM() {
+#     if [ "$WIDGET" != "expand-or-complete" ]; then
+#         zle reset-prompt
+#     fi
+# }
 
 print_elapsed "pre pipenv"
 # inline output of `pipenv --completion` instead of using `eval "$(pipenv --completion)"`
@@ -98,7 +100,7 @@ print_elapsed "pre sdkman"
 export SDKMAN_DIR="/Users/dasutherland/.sdkman"
 [[ -s "/Users/dasutherland/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dasutherland/.sdkman/bin/sdkman-init.sh"
 
-print_elapsed "end"
+print_elapsed "pre conda"
 
 # >>> conda initialize >>>
 CONDA_AUTO_ACTIVATE_BASE=false
@@ -116,3 +118,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+print_elapsed "end"
