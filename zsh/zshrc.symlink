@@ -10,7 +10,7 @@ local start_time=$(($($date_fn +%s%0N)/1000000))
 print_elapsed() {
     now=$(($($date_fn +%s%0N)/1000000))
     elapsed=$(($now-$start_time))
-    # echo "$1 ${elapsed}ms"
+    echo "$1 ${elapsed}ms"
 }
 
 

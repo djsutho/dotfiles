@@ -60,7 +60,8 @@ brew install \
   prototool \
   yarn \
   tfenv \
-  rbenv/tap/openssl@1.0
+  rbenv/tap/openssl@1.0 \
+  nss
 
 brew install --cask \
   chromium \
@@ -87,7 +88,10 @@ brew install --cask \
   lens \
   mysqlworkbench \
   swiftdefaultappsprefpane \
-  miniconda
+  miniconda \
+  robo-3t \
+  clocker \
+  stats
 
 brew cu -y
 
