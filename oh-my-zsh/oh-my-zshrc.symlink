@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 
 export DEFAULT_USER="dasutherland"
 
-source ${HOME}/fsh/fast-syntax-highlighting.plugin.zsh
+source ${HOME}/fsh/F-Sy-H.plugin.zsh
 
 unsetopt INC_APPEND_HISTORY
 unsetopt share_history

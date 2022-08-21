@@ -1,6 +1,8 @@
+echo "sudo python commands"
 sudo -H python -m ensurepip
 sudo -H pip install --upgrade pip
 sudo -H pip install virtualenvwrapper
+echo "sudo done"
 
 pipx ensurepath
 

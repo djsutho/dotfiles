@@ -5,6 +5,8 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 
+# exit 0
+
 # Check for Homebrew
 if test ! $(which brew)
 then
@@ -25,6 +27,9 @@ fi
 # exit 0
 
 echo "installing brew items"
+
+sudo chown -R $(whoami) /usr/local/share/zsh /usr/local/share/zsh/site-functions
+chmod u+w /usr/local/share/zsh /usr/local/share/zsh/site-functions
 
 # Make sure we’re using the latest Homebrew.
 brew update
