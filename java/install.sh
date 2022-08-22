@@ -7,15 +7,17 @@ export SDKMAN_DIR="/Users/dasutherland/.sdkman"
 [[ -s "/Users/dasutherland/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dasutherland/.sdkman/bin/sdkman-init.sh"
 
 
-if test ! $(which java)
+if test ! $(java -version)
 then
   sdk install java
-  sdk install java 8.0.232.hs-adpt
+  sdk install java 11.0.16-tem
+  sdk install java 8.0.345-tem
 fi
 
-if test ! $(which java)
+if test ! $(which mvn)
 then
   sdk install maven
+  sdk default maven
 fi
 
 exit 0

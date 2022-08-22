@@ -9,5 +9,6 @@ pipx ensurepath
 pipx install cve-bin-tool
 pipx install yq
 pipx install sshuttle==0.78.5
+pipx install virtualenvwrapper
 
 exit 0
