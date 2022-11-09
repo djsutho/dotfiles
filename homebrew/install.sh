@@ -39,6 +39,7 @@ brew upgrade
 
 brew tap buo/cask-upgrade
 brew tap ktr0731/evans
+brew tap davide4hire/teleport
 
 brew install \
   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
@@ -66,7 +67,12 @@ brew install \
   yarn \
   tfenv \
   rbenv/tap/openssl@1.0 \
-  nss
+  nss \
+  teleport@7.3 \
+  librsvg \
+  eddieantonio/eddieantonio/imgcat \
+  qemu \
+  saml2aws
 
 brew install --cask \
   chromium \
@@ -81,7 +87,6 @@ brew install --cask \
   docker \
   insomnia \
   postman \
-  virtualbox \
   vlc \
   disk-inventory-x \
   grandperspective \
@@ -90,13 +95,16 @@ brew install --cask \
   bloomrpc \
   wombat \
   milkman \
-  lens \
   mysqlworkbench \
   swiftdefaultappsprefpane \
   miniconda \
   robo-3t \
   clocker \
-  stats
+  stats \
+  session-manager-plugin \
+  alt-tab
+  # lens \ using open lens manually
+  # virtualbox \
 
 brew cu -y
 
