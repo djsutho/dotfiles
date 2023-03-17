@@ -40,6 +40,7 @@ brew upgrade
 brew tap buo/cask-upgrade
 brew tap ktr0731/evans
 brew tap davide4hire/teleport
+brew tap homebrew/cask-drivers
 
 brew install \
   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
@@ -68,11 +69,13 @@ brew install \
   tfenv \
   rbenv/tap/openssl@1.0 \
   nss \
-  teleport@7.3 \
   librsvg \
   eddieantonio/eddieantonio/imgcat \
   qemu \
-  saml2aws
+  saml2aws \
+  openldap
+  # logitech-options
+  # teleport@7.3 \
 
 brew install --cask \
   chromium \
@@ -102,7 +105,8 @@ brew install --cask \
   clocker \
   stats \
   session-manager-plugin \
-  alt-tab
+  alt-tab \
+  julia
   # lens \ using open lens manually
   # virtualbox \
 

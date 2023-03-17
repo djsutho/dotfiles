@@ -20,4 +20,10 @@ then
   sdk default maven
 fi
 
+if test ! $(which kotlin)
+then
+  sdk install kotlin
+  sdk default kotlin
+fi
+
 exit 0

@@ -4,6 +4,9 @@ echo "sudo python commands"
 # sudo -H pip install virtualenvwrapper
 echo "sudo done"
 
+pyenv install `pyenv latest 3`
+pyenv global `pyenv latest 3`
+
 pipx ensurepath
 
 pipx install cve-bin-tool
