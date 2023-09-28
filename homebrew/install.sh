@@ -73,12 +73,12 @@ brew install \
   eddieantonio/eddieantonio/imgcat \
   qemu \
   saml2aws \
-  openldap
+  openldap \
+  gh
   # logitech-options
   # teleport@7.3 \
 
 brew install --cask \
-  chromium \
   opera \
   brave-browser \
   microsoft-edge \
@@ -106,9 +106,15 @@ brew install --cask \
   stats \
   session-manager-plugin \
   alt-tab \
-  julia
+  julia \
+  obsidian \
+  github
   # lens \ using open lens manually
   # virtualbox \
+  # chromium \
+
+# insecure developer?
+brew install --cask --no-quarantine middleclick
 
 brew cu -y
 

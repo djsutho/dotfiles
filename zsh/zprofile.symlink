@@ -1,1 +1,3 @@
-eval "$(pyenv init --path)"
+echo "zprofile $(date)"
+
+# eval "$(pyenv init --path)"

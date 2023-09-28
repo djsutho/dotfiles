@@ -1,3 +1,6 @@
+# print date when this first starts loading
+echo "zshrc $(date)"
+
 # using `gdate` on osx
 date_fn="date"
 if (( $+commands[gdate] ))
@@ -12,6 +15,10 @@ print_elapsed() {
     elapsed=$(($now-$start_time))
     echo "$1 ${elapsed}ms"
 }
+print_elapsed "starting"
+
+eval "$(pyenv init - zsh --no-rehash)"
+print_elapsed "post pyenv"
 
 
 # shortcut to this dotfiles path is $DF_PATH
@@ -53,6 +60,7 @@ for file in ${(M)config_files:#*/completion.zsh}
 do
   source $file
 done
+print_elapsed "post .dotfiles"
 
 unset config_files
 
@@ -88,9 +96,6 @@ _pipenv() {
 if [[ "$(basename -- ${(%):-%x})" != "_pipenv" ]]; then
   compdef _pipenv pipenv
 fi
-
-print_elapsed "pre pyenv"
-# eval "$(pyenv init - zsh --no-rehash)"
 
 # Created by `userpath` on 2020-07-29 23:20:06
 export PATH="$PATH:/Users/dasutherland/.local/bin"

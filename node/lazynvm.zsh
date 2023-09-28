@@ -52,5 +52,7 @@ load-nvmrc() {
     nvm use default
   fi
 }
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+
+# way too slow with beyond trust installed
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
