@@ -13,13 +13,7 @@ then
   echo "  Installing Homebrew for you."
 
   # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-  fi
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 fi
 
@@ -41,6 +35,7 @@ brew tap buo/cask-upgrade
 brew tap ktr0731/evans
 # brew tap davide4hire/teleport
 brew tap homebrew/cask-drivers
+brew tap homebrew/cask-versions
 
 brew install \
   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
@@ -110,7 +105,10 @@ brew install --cask \
   alt-tab \
   julia \
   obsidian \
-  github
+  github \
+  firefox-developer-edition \
+  visual-studio-code \
+  intellij-idea
   # lens \ using open lens manually
   # virtualbox \
   # chromium \
