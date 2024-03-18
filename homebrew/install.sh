@@ -39,7 +39,7 @@ brew upgrade
 
 brew tap buo/cask-upgrade
 brew tap ktr0731/evans
-brew tap davide4hire/teleport
+# brew tap davide4hire/teleport
 brew tap homebrew/cask-drivers
 
 brew install \
@@ -74,7 +74,9 @@ brew install \
   qemu \
   saml2aws \
   openldap \
-  gh
+  gh \
+  redis \
+  wget
   # logitech-options
   # teleport@7.3 \
 

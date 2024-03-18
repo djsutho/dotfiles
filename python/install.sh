@@ -4,6 +4,9 @@ echo "sudo python commands"
 # sudo -H pip install virtualenvwrapper
 echo "sudo done"
 
+# trying this https://stackoverflow.com/a/51373253/2727476
+rm /usr/local/bin/pip3
+
 pyenv install `pyenv latest 3`
 pyenv global `pyenv latest 3`
 
@@ -15,6 +18,7 @@ pipx install yq
 pipx install sshuttle
 pipx install ipython
 pipx install poetry
+pipx install tox
 
 pip install requests ipdb virtualenv virtualenvwrapper
 

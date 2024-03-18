@@ -124,4 +124,4 @@ print_elapsed "pre conda"
 # # <<< conda initialize <<<
 
 print_elapsed "end"
-export PATH="/usr/local/opt/teleport@7.3/bin:$PATH"
+# export PATH="/usr/local/opt/teleport@7.3/bin:$PATH"
