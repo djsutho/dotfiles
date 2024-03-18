@@ -71,7 +71,8 @@ brew install \
   openldap \
   gh \
   redis \
-  wget
+  wget \
+  egctl
   # logitech-options
   # teleport@7.3 \
 
@@ -108,8 +109,8 @@ brew install --cask \
   github \
   firefox-developer-edition \
   visual-studio-code \
-  intellij-idea
-  # lens \ using open lens manually
+  intellij-idea \
+  openlens
   # virtualbox \
   # chromium \
 
