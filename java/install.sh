@@ -18,13 +18,13 @@ fi
 if test ! $(which mvn)
 then
   sdk install maven
-  sdk default maven
+  sdk default maven `ls -l ~/.sdkman/candidates/maven | awk '/^d/ {print $9}' | sort -r | head -1`
 fi
 
 if test ! $(which kotlin)
 then
   sdk install kotlin
-  sdk default kotlin
+  sdk default kotlin `ls -l ~/.sdkman/candidates/kotlin | awk '/^d/ {print $9}' | sort -r | head -1`
 fi
 
 exit 0

@@ -34,7 +34,6 @@ brew upgrade
 brew tap buo/cask-upgrade
 brew tap ktr0731/evans
 # brew tap davide4hire/teleport
-brew tap homebrew/cask-drivers
 brew tap homebrew/cask-versions
 
 brew install \
@@ -71,9 +70,7 @@ brew install \
   openldap \
   gh \
   redis \
-  wget \
-  egctl
-  # logitech-options
+  wget
   # teleport@7.3 \
 
 brew install --cask \
