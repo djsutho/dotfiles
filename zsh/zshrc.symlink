@@ -97,9 +97,6 @@ if [[ "$(basename -- ${(%):-%x})" != "_pipenv" ]]; then
   compdef _pipenv pipenv
 fi
 
-# Created by `userpath` on 2020-07-29 23:20:06
-export PATH="$PATH:/Users/dasutherland/.local/bin"
-
 print_elapsed "pre sdkman"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/dasutherland/.sdkman"
@@ -122,7 +119,5 @@ print_elapsed "pre conda"
 # fi
 # unset __conda_setup
 # # <<< conda initialize <<<
-
-source `which virtualenvwrapper_lazy.sh`
 
 print_elapsed "end"
