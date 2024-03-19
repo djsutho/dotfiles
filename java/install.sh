@@ -10,8 +10,9 @@ export SDKMAN_DIR="/Users/dasutherland/.sdkman"
 if test ! $(java -version)
 then
   sdk install java
-  sdk install java 11.0.16-tem
-  sdk install java 8.0.345-tem
+  sdk install java `sdk list java | grep ' 17\..*-tem' | head -1 | cut -f 6 -d '|' | xargs`
+  sdk install java `sdk list java | grep ' 11\..*-tem' | head -1 | cut -f 6 -d '|' | xargs`
+  sdk install java `sdk list java | grep ' 8\..*-tem' | head -1 | cut -f 6 -d '|' | xargs`
 fi
 
 if test ! $(which mvn)
