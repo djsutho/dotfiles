@@ -123,5 +123,6 @@ print_elapsed "pre conda"
 # unset __conda_setup
 # # <<< conda initialize <<<
 
+source `which virtualenvwrapper_lazy.sh`
+
 print_elapsed "end"
-# export PATH="/usr/local/opt/teleport@7.3/bin:$PATH"
