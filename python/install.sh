@@ -5,9 +5,9 @@ echo "sudo python commands"
 echo "sudo done"
 
 # trying this https://stackoverflow.com/a/51373253/2727476
-rm /usr/local/bin/pip3
+rm /usr/local/bin/pip3 || true
 
-pyenv install `pyenv latest 3`
+pyenv install `pyenv latest -k 3`
 pyenv global `pyenv latest 3`
 
 pipx ensurepath
