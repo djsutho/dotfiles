@@ -12,7 +12,8 @@ then
   sdk install java
   sdk install java `sdk list java | grep ' 17\..*-tem' | head -1 | cut -f 6 -d '|' | xargs`
   sdk install java `sdk list java | grep ' 11\..*-tem' | head -1 | cut -f 6 -d '|' | xargs`
-  sdk install java `sdk list java | grep ' 8\..*-tem' | head -1 | cut -f 6 -d '|' | xargs`
+  # temurin 8 seems to have disappeared
+  sdk install java `sdk list java | grep ' 8\..*-amzn' | head -1 | cut -f 6 -d '|' | xargs`
 fi
 
 if test ! $(which mvn)
