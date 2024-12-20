@@ -19,8 +19,8 @@ pipx install sshuttle
 pipx install ipython
 pipx install poetry
 pipx install tox
-pipx install virtualenv
-pipx install virtualenvwrapper
+# pipx install virtualenv
+# pipx install virtualenvwrapper
 
 pip install requests ipdb 
 

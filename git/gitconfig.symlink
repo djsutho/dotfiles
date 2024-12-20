@@ -21,16 +21,28 @@
         whitespace = nowarn
 
 [merge]
-    tool = meld
+#        tool = vscode
+        tool = kdiff3
+#        tool = meld
 [mergetool "meld"]
-    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+        cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+#[mergetool "kdiff3"]
+#	cmd = kdiff3 $LOCAL $REMOTE $BASE -o $MERGED
+[mergetool "vscode"]
+        cmd = code --wait $MERGED
 
 [diff]
-    tool = meld
+#        tool = vscode
+        tool = kdiff3
+#        tool = meld
 [difftool]
-    prompt = false
+        prompt = false
 [difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
+        cmd = meld "$LOCAL" "$REMOTE"
+#[diff "kdiff3"]
+#        cmd = kdiff3 $LOCAL $REMOTE
+[difftool "vscode"]
+        cmd = code --wait --diff $LOCAL $REMOTE
 
 [help]
         autocorrect = 1
@@ -41,7 +53,8 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [credential]
-	helper = osxkeychain
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
 
 [pull]
 	rebase = false

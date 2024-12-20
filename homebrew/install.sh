@@ -70,7 +70,10 @@ brew install \
   openldap \
   gh \
   redis \
-  wget
+  wget \
+  virtualenvwrapper \
+  bruno \
+  jfrog-cli
   # teleport@7.3 \
 
 brew install --cask \
@@ -107,7 +110,11 @@ brew install --cask \
   firefox-developer-edition \
   visual-studio-code \
   intellij-idea \
-  openlens
+  openlens \
+  kubenav \
+  kdiff3 \
+  zed \
+  betterdisplay
   # virtualbox \
   # chromium \
 

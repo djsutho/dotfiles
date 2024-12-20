@@ -27,3 +27,8 @@ alias gpo='git push --set-upstream origin "$(git_current_branch)"'
 alias git_permission_reset='git diff -p -R --no-ext-diff --no-color \
     | grep -E "^(diff|(old|new) mode)" --color=never  \
     | git apply'
+
+
+workflow_delete() {
+  gh run list --workflow $1 --json databaseId --jq '.[].databaseId' | xargs -I{} gh run delete {}
+}
